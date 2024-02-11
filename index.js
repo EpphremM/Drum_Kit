@@ -1,7 +1,6 @@
+const impact = document.querySelector(".punch");
 document.addEventListener("keypress", function (event) {
   makeSound(event.key);
-
-  buttonAnimation(event.key);
 });
 
 function makeSound(key) {
@@ -46,9 +45,22 @@ function makeSound(key) {
 }
 
 function buttonAnimation(currentBtn) {
+  impact.classList.remove("pressed");
+  console.log(impact);
   currentBtn.classList.add("pressed");
+  currentBtn.querySelector(".kit-img").classList.remove("pressed");
+
+  currentBtn.querySelector(".kit-img").classList.add("pressed");
+
+  impact.style.top = currentBtn.offsetTop + currentBtn.clientHeight - 20 + "px";
+  impact.style.left = currentBtn.offsetLeft - 20 + "px";
+  impact.classList.add("pressed");
 
   setTimeout(function () {
     currentBtn.classList.remove("pressed");
   }, 100);
+  setTimeout(function () {
+    currentBtn.querySelector(".kit-img").classList.remove("pressed");
+    impact.classList.remove("pressed");
+  }, 500);
 }
