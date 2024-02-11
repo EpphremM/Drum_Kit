@@ -28,6 +28,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 5px;
+  align-content: center;
 }
 
 .pressed {
