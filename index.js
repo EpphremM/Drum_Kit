@@ -4,44 +4,41 @@ document.addEventListener("keypress", function (event) {
 });
 
 function makeSound(key) {
-  switch (key) {
-    case "q":
-      new Audio("sounds/tom-1.mp3").play();
-      buttonAnimation(document.querySelector(".q"));
-      break;
-
-    case "w":
-      new Audio("sounds/tom-2.mp3").play();
-      buttonAnimation(document.querySelector(".w"));
-      break;
-
-    case "e":
-      new Audio("sounds/snare.mp3").play();
-      buttonAnimation(document.querySelector(".e"));
-      break;
-
-    case "r":
-      new Audio("sounds/crash.mp3").play();
-      buttonAnimation(document.querySelector(".r"));
-      break;
-
-    case "t":
-      new Audio("sounds/kick-bass.mp3").play();
-      buttonAnimation(document.querySelector(".t"));
-      break;
-    case "y":
-      new Audio("sounds/ride.mp3").play();
-      buttonAnimation(document.querySelector(".y"));
-      break;
-    case "u":
-      new Audio("sounds/hit-hat-closed.mp3").play();
-      buttonAnimation(document.querySelector(".u"));
-      break;
-    case "i":
-      new Audio("sounds/floor-tom.mp3").play();
-      buttonAnimation(document.querySelector(".i"));
-      break;
-  }
+   if(key=='q'||key=='Q')
+   {
+    new Audio("sounds/tom-1.mp3").play();
+    buttonAnimation(document.querySelector(".q"));
+   }
+   else if(key=='w'||key=='W')
+   {
+    new Audio("sounds/tom-2.mp3").play();
+    buttonAnimation(document.querySelector(".w"));
+   } 
+   else if(key=='e'||key=='E')
+   {
+    new Audio("sounds/snare.mp3").play();
+    buttonAnimation(document.querySelector(".e"));
+   }
+   else if(key=='r'||key=='R'){
+    new Audio("sounds/crash.mp3").play();
+    buttonAnimation(document.querySelector(".r"));
+   }
+   else if(key=='t'||key=='T'){
+    new Audio("sounds/kick-bass.mp3").play();
+    buttonAnimation(document.querySelector(".t"));
+}
+else if(key=='y'||key=='Y'){
+  new Audio("sounds/ride.mp3").play();
+  buttonAnimation(document.querySelector(".y"));
+}
+else if(key=='u'||key=='U'){   
+  new Audio("sounds/hit-hat-closed.mp3").play();
+  buttonAnimation(document.querySelector(".u"));
+}
+  else if(key=='i'||key=='I'){
+    new Audio("sounds/floor-tom.mp3").play();
+    buttonAnimation(document.querySelector(".i"));
+    }
 }
 
 function buttonAnimation(currentBtn) {
