@@ -99,7 +99,7 @@ img {
 
 .drum.pressed {
   box-shadow: 5px 5px #da0463;
-  animation: shadow-animation 0.5s 1 linear, scale-animation-div 0.1s 1 linear;
+  animation: shadow-animation 0.5s 1 linear, scale-animation-div 0.05s 2 linear;
 }
 
 .kit-img.pressed {
